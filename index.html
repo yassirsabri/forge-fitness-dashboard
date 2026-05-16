@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Forge | Minimalist 4-Day Hypertrophy & HIIT Dashboard</title>
+    <meta name="description" content="A clean, responsive, open-source single-page fitness dashboard designed for tracking 4-day athletic hypertrophy splits and stationary bike conditioning. Built with Tailwind CSS.">
+    <meta name="keywords" content="workout dashboard, fitness tracker, Tailwind CSS gym app, 4 day split, hypertrophy routine, open source fitness, stationary bike tracker">
+    <meta name="author" content="Open Source Contributor">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Forge | Minimalist 4-Day Hypertrophy Dashboard">
+    <meta property="og:description" content="Track your training with a beautiful, zero-bloat, dark-mode single page app. Built for developers who lift.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forge | Minimalist Fitness Dashboard">
+    <meta name="twitter:description" content="Zero bloat. Just pure training data, execution videos, and clean dark-mode UI.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0b0f1a; color: #e2e8f0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card { background: #161e2d; border: 1px solid #1f2937; border-radius: 12px; padding: 20px; margin-bottom: 20px; transition: transform 0.2s ease, border-color 0.2s ease; }
+        .card:hover { border-color: #38bdf8; transform: translateY(-2px); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 15px; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .nav-btn { border: 1px solid #334155; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; background: #1e293b; transition: 0.2s; }
+        .nav-btn.active { background-color: #38bdf8; color: #0b0f1a; border-color: #38bdf8; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+        th, td { border: 1px solid #1f2937; padding: 12px; text-align: left; }
+        th { background: #1e293b; color: #38bdf8; }
+        .focus-banner { color: #38bdf8; font-weight: bold; font-size: 1.2rem; text-align: center; margin: 20px 0; border: 2px dashed #38bdf8; padding: 12px; border-radius: 8px; background: rgba(56, 189, 248, 0.05); }
+    </style>
+</head>
+<body class="p-4 md:p-10 max-w-5xl mx-auto">
+
+    <header class="mb-10 text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-sky-500">FORGE // TRAINING DASHBOARD</h1>
+        <p class="text-slate-400 mt-2 text-sm">A minimalist open-source framework for structured power and conditioning</p>
+    </header>
+
+    <nav class="flex flex-wrap justify-center gap-2 mb-10">
+        <button onclick="showDay(event, 'day1')" class="nav-btn active">DAY 1</button>
+        <button onclick="showDay(event, 'day2')" class="nav-btn">DAY 2</button>
+        <button onclick="showDay(event, 'day3')" class="nav-btn">DAY 3</button>
+        <button onclick="showDay(event, 'day4')" class="nav-btn">DAY 4</button>
+        <button onclick="showDay(event, 'risks')" class="nav-btn">SAFETY & CONDITIONING</button>
+    </nav>
+
+    <div class="focus-banner">⚡ Execution Principle: Maintain Intra-Thoracic Stability & Perfect Eccentric Control</div>
+
+    <main>
+        <div id="day1" class="tab-content active">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">Day 1: The Power Foundation</h2>
+            <p class="text-slate-400">Focus: High mechanical tension to optimize motor unit recruitment across prime movers.</p>
+            
+            <div class="card mt-4 bg-sky-900/10 border-sky-500/30">
+                <p class="font-bold text-sky-400">HIIT Conditioning Warm-up (4 Minutes)</p>
+                <p>Resistance: Low (Level 3–5) | Cadence: 80–90 RPM.</p>
+                <p class="mt-4 font-bold text-sky-400">Anaerobic Sprints (6 Cycles: 30s Work / 30s Recovery)</p>
+                <p>• <strong>30s Burst:</strong> Increase resistance to High (Level 12–15+). Target 100+ RPM with maximum neural drive.</p>
+                <p>• <strong>30s Reset:</strong> Drop resistance to minimum. Maintain fluid, light revolutions to clear metabolic waste.</p>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Machine Chest Press</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 8 Reps | Tempo: 3-0-X-1</p>
+                <p class="text-slate-400 text-sm">Target Load: RPE 8. Focus on explosive concentric acceleration while keeping scapula retracted.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CIykDiF4sfg"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Wide Grip Lat Pulldowns</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 8 Reps</p>
+                <p class="text-slate-400 text-sm">Drive through the elbows. Pull directly to the upper clavicle region without leveraging momentum.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/bNmvKpJSWKM"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Machine Shoulder Press</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 10 Reps</p>
+                <p class="text-slate-400 text-sm">Keep the thoracic spine stabilized firmly against the backrest to isolate the anterior deltoids.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6v4nrRVySj0"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Leg Extension Machine</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 12 Reps</p>
+                <p class="text-slate-400 text-sm">Enforce a full 1-second peak isometric contraction at terminal extension to maximize rectus femoris engagement.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uM86QE59Tgc"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Machine Preacher Curls</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 10 Reps</p>
+                <p class="text-slate-400 text-sm">Align armpits cleanly over the pad crest. Avoid hyperextension at the bottom margins.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eYrAV7rnol0"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Cable Triceps Pushdown (Straight Bar)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <p class="text-slate-400 text-sm">Lock glenohumeral joints completely in place; flex purely at the elbow axis.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1FjkhpZsaxc"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Standing Calf Raise Machine</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <p class="text-slate-400 text-sm">Execute a deep stretch on the achilles tendon followed by a complete plantar flexion burst.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VFly5vISChc"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Core: Standard Iso-Plank</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 60 Seconds</p>
+                <p class="text-slate-400 text-sm">Keep glutes packed tightly and maintain neutral spine orientation throughout.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xe2MXatLTUw"></iframe></div>
+            </div>
+        </div>
+
+        <div id="day2" class="tab-content">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">Day 2: Athletic Density</h2>
+            <p class="text-slate-400">Focus: Multi-planar shoulder health and targeted compound volume.</p>
+
+            <div class="card mt-4 bg-sky-900/10 border-sky-500/30">
+                <p class="font-bold text-sky-400">HIIT Conditioning Warm-up & Sprints</p>
+                <p>Standardized protocol: 4-min warm-up + 6 rounds of 30s max anaerobic efforts / 30s passive recovery.</p>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Flat Bench Press</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 8–10 Reps</p>
+                <p class="text-slate-400 text-sm">Slightly tuck elbows to a 45-degree angle to safe-guard the anterior shoulder capsule.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WbCEvFA0NJs"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">One-Arm Dumbbell Row</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 8 Reps (Per Side)</p>
+                <p class="text-slate-400 text-sm">Pull back toward the hip crease to maximize the line of pull along the latissimus dorsi.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yHqqGd0tXcw"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Lateral Raises</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 15 Reps</p>
+                <p class="text-slate-400 text-sm">Lean slightly forward; lead with the elbows into the scapular plane to build medial delt cap thickness.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Kl3LEzQ5Zqs"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Leg Curl Machine</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 12 Reps</p>
+                <p class="text-slate-400 text-sm">Prevent hips from lifting out of the machine seat; focus on complete knee flexion range.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/_lgE0gPvbik"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Hammer Curls</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <p class="text-slate-400 text-sm">Emphasize a neutral grip to load the brachialis and brachioradialis complexes intensely.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/_aoad2yuP5w"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Machine Dips</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <p class="text-slate-400 text-sm">Keep shoulders pulled back dynamically to emphasize the lateral and long heads of the triceps.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4JZfrrqz6iw"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Calf Raise Machine</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/S2yhz3klwdU"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Bench Knee Tucks</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 20 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/o99Zcz9pPvI"></iframe></div>
+            </div>
+        </div>
+
+        <div id="day3" class="tab-content">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">Day 3: The Functional Warrior</h2>
+            <p class="text-slate-400">Focus: Upper chest development and dynamic rotation control.</p>
+
+            <div class="card mt-4 bg-sky-900/10 border-sky-500/30">
+                <p class="font-bold text-sky-400">HIIT Conditioning Warm-up & Sprints</p>
+                <p>Standardized protocol settings applied.</p>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Incline Machine Chest Press</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 10 Reps</p>
+                <p class="text-slate-400 text-sm">Targets clavicular head performance profiles cleanly without forcing excessive shoulder strain.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Qu7-ceCvq7w"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Cable Row (Wide Bar)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 10 Reps</p>
+                <p class="text-slate-400 text-sm">Pull toward the lower sternum region to trigger upper-mid back thickness.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vqPY3fDessY"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Machine Lateral Raise</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/l89vNiySZ-Q"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Seated Leg Press</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 10 Reps</p>
+                <p class="text-slate-400 text-sm">Safety Principle: Keep feet positioned high on the carriage platform to eliminate extreme flexion stress angles.</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/EotSw18oR9w"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Incline Curls</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fXFN8_1Bh6k"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Cable Overhead Tricep Extension (Rope)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9Ark9S11uXw"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Machine Reverse Fly (Rear Delts)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7tgx6QHB0-A"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Core: Standing Cable Woodchops</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps (Per Side)</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tP3S7tAVXy8"></iframe></div>
+            </div>
+        </div>
+
+        <div id="day4" class="tab-content">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">Day 4: The Finishing Armor</h2>
+            <p class="text-slate-400">Focus: Accelerated high-volume output metabolic conditioning.</p>
+
+            <div class="card mt-4 bg-sky-900/10 border-sky-500/30"><p>Warm-up and Sprints: Repeat Day 1 infrastructure configurations.</p></div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Pec Deck Machine (Chest Fly)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/a9vQ_hwIksU"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Chest-Supported Machine Row</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 4 Sets × 10 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/-q4OkPSL2AA"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Front Raises</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9ThlTL25DH8"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Superset: Leg Extensions + Seated Leg Curls</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Cycles × 12 Reps (Back-to-Back)</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NxPR7G_YNHI"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Cable Bicep Curls (Straight Bar)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CrbTqNOlFgE"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Triceps Kickbacks</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 12 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WhBxKbe1-NU"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Dumbbell Shrugs</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/rFsSeClGnNA"></iframe></div>
+            </div>
+
+            <div class="card">
+                <p class="font-bold text-lg text-slate-100">Core: Hanging Knee Raises (Captain's Chair)</p>
+                <p class="text-sky-400 text-sm mb-2">Structure: 3 Sets × 15 Reps</p>
+                <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Q-HRZLba_20"></iframe></div>
+            </div>
+        </div>
+
+        <div id="risks" class="tab-content">
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">Kinematic Safety Matrix</h2>
+            <p class="text-slate-400 mb-4">Biomechanical threat classification and mechanical tension management metrics.</p>
+            <table>
+                <thead><tr><th>Exercise Block</th><th>Risk Level</th><th>Mitigation & Biomechanics</th></tr></thead>
+                <tbody>
+                    <tr><td>Seated Leg Press</td><td>Medium-High</td><td>Bringing knees past a 90-degree angle under load can result in spinal flexion or excessive pelvic tilting. Keep range cleanly monitored.</td></tr>
+                    <tr><td>Hanging Knee Raises</td><td>Medium</td><td>Over-reliance on dynamic swinging engages the hip flexors excessively instead of keeping isolation tension focused on the lower abdominal sheath. Maintain zero momentum.</td></tr>
+                    <tr><td>Standing Calf Raises</td><td>Low-Medium</td><td>Ego-lifting with extreme loads induces structural compression along the spinal cord. Keeping knees micro-flexed prevents joint stress pooling.</td></tr>
+                    <tr><td>Seated Machine Presses</td><td>Low</td><td>Highly safe structural assets. Back support reduces structural reliance on spinal bracing mechanics. Ideal selection for controlled progressive overload.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="card mt-10">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">Stationary Bike Conditioning Engine</h2>
+                <p class="font-bold text-slate-100">Initial Warm-up Integration (4 Minutes)</p>
+                <p class="text-slate-400">Resistance Set: Low (Level 3–5). Cadence Window: 80–90 RPM. Enforce deep, controlled parasympathetic breathing loops.</p>
+                
+                <p class="font-bold mt-4 text-slate-100">HIIT Interval Architecture (6 Cycles: 30s High Core Output / 30s Active Recovery)</p>
+                <p class="text-slate-400"><strong class="text-sky-400">30s Work Target:</strong> High Threshold (Level 12–15+). Maximize turnover rate to achieve 100+ RPM metrics under intense resistance loads.</p>
+                <p class="text-slate-400"><strong class="text-slate-300">30s Cleanse Interval:</strong> Zero-resistance reset window. Track smooth revolutions to normalize performance baselines.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showDay(evt, dayId) {
+            var i, tabcontent, navbtns;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+            navbtns = document.getElementsByClassName("nav-btn");
+            for (i = 0; i < navbtns.length; i++) { navbtns[i].className = navbtns[i].className.replace(" active", ""); }
+            document.getElementById(dayId).style.display = "block";
+            evt.currentTarget.className += " active";
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
